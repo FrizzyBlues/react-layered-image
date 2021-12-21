@@ -4,7 +4,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5", 
+    "esModuleInterop": true
   },
   "include": ["./lib/**/*"],
   "exclude": ["node_modules"]
