@@ -7,17 +7,29 @@ import Save from './Save';
 // import Home from "./Home";
 
 export default class App extends Component {
+    generateRandomNum = (arr) => {
+        return Math.floor(Math.random() * arr.length)
+    }
     //state
     state = { layers: [
-        background[0], 
-        body[0], 
-        nose[0], 
-        eyes[0], 
-        hair[0], 
-        cap[0], 
-        shirtColor[0], 
-        shirtDesign[0], 
-        mouth[0],
+        // background[Math.floor(Math.random() * background.length)], 
+        // body[Math.floor(Math.random() * body.length)], 
+        // nose[Math.floor(Math.random() * nose.length)], 
+        // eyes[Math.floor(Math.random() * eyes.length)], 
+        // hair[Math.floor(Math.random() * hair.length)], 
+        // cap[Math.floor(Math.random() * cap.length)], 
+        // shirtColor[Math.floor(Math.random() * shirtColor.length)], 
+        // shirtDesign[Math.floor(Math.random() * shirtDesign.length)], 
+        // mouth[Math.floor(Math.random() * mouth.length)],
+        background[this.generateRandomNum(background)], 
+        body[this.generateRandomNum(body)], 
+        nose[this.generateRandomNum(nose)], 
+        eyes[this.generateRandomNum(eyes)], 
+        hair[this.generateRandomNum(hair)], 
+        cap[this.generateRandomNum(cap)], 
+        shirtColor[this.generateRandomNum(shirtColor)], 
+        shirtDesign[this.generateRandomNum(shirtDesign)], 
+        mouth[this.generateRandomNum(mouth)],
     ]}
 
     style: React.CSSProperties = {
@@ -31,10 +43,6 @@ export default class App extends Component {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#e1e8ed" 
-    }
-
-    generateRandomNum = (arr) => {
-        return Math.floor(Math.random() * arr.length)
     }
 
     //generate diffrent quote function
@@ -55,15 +63,15 @@ export default class App extends Component {
         //update state
         this.setState({layers: newArt})
 
-        // this.shuffleQuotes(background)
-        // this.shuffleQuotes(body)
-        // this.shuffleQuotes(nose)
-        // this.shuffleQuotes(eyes)
-        // this.shuffleQuotes(hair)
-        // this.shuffleQuotes(cap)
-        // this.shuffleQuotes(shirtColor)
-        // this.shuffleQuotes(shirtDesign)
-        // this.shuffleQuotes(mouth)
+        this.shuffleQuotes(background)
+        this.shuffleQuotes(body)
+        this.shuffleQuotes(nose)
+        this.shuffleQuotes(eyes)
+        this.shuffleQuotes(hair)
+        this.shuffleQuotes(cap)
+        this.shuffleQuotes(shirtColor)
+        this.shuffleQuotes(shirtDesign)
+        this.shuffleQuotes(mouth)
     }
 
     //shuufle quotes function

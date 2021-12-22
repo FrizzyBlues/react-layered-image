@@ -127,5 +127,5 @@ const shirtDesign = [
 ];
 
 
-module.exports = {background, body, nose, eyes, hair, cap, shirtColor, shirtDesign, mouth}
+module.exports = { background, body, nose, eyes, hair, cap, shirtColor, shirtDesign, mouth }
 
